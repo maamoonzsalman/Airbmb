@@ -1,16 +1,11 @@
 const express = require('express');
 const cors = require('cors');
-const { Pool } = require('pg');
 require('dotenv').config();
 
 const app = express();
 app.use(express.json());
 app.use(cors({ origin: '*',}));
 
-
-const pool = new Pool({
-    connectionString: process.env.DATABASE_URL,
-});
 
 app.get('/api/test', async (req, res) => {
     try {
