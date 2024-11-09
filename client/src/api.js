@@ -7,5 +7,4 @@ const baseURL =
 
 export default axios.create({
     baseURL,
-    withCredentials: true,
 });
