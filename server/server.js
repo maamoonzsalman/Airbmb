@@ -8,13 +8,7 @@ app.use(cors({ origin: '*',}));
 
 
 app.get('/api/test', async (req, res) => {
-    try {
-        const result = await pool.query('SELECT NOW()');
-        res.json(result.rows);
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({ error: 'Database error' });
-    }
+    res.json({ message: 'Backend is reachable!' });
 });
 
 const PORT = process.env.PORT || 4000;
