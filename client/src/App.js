@@ -4,16 +4,19 @@ import api from './api';
 function App() {
     const [data, setData] = useState(null);
 
-    useEffect(() => {
+    useEffect(async () => {
         console.log('this', process.env.NODE_ENV)
-        api.get('/api/test')
-            .then((res) => setData(res.data))
-            .catch((err) => console.error(err));
+        try {
+            const response = await api.get('/api/test')
+            setData(response.data)
+        } catch (e) {
+            console.error(e)
+        }
     }, []);
 
     return (
         <div>
-            <h1>Backendd Test</h1>
+            <h1>Backends Test</h1>
             <pre>{JSON.stringify(data, null, 2)}</pre>
         </div>
     );

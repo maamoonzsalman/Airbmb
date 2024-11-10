@@ -12,7 +12,7 @@ app.use(express.json());
 
 const allowedOrigin =
     process.env.NODE_ENV === 'production'
-        ? process.env.FRONTEND_URL 
+        ? 'http://airbmbucket.s3-website.us-east-2.amazonaws.com'
         : 'http://localhost:3000';   
 
 const corsOptions = {
