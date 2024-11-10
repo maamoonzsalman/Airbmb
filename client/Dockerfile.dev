@@ -1,0 +1,20 @@
+# Use Node for development
+FROM node:16
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the package.json and package-lock.json files
+COPY package.json package-lock.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy the rest of the frontend code
+COPY . .
+
+# Expose the frontend port
+EXPOSE 3000
+
+# Start the development server
+CMD ["npm", "start"]

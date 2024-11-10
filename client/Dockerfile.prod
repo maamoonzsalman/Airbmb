@@ -1,0 +1,19 @@
+# Use Node for building the app
+FROM node:16 as builder
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the package.json and package-lock.json files
+COPY package.json package-lock.json ./
+
+# Install dependencies and build the app
+RUN npm install
+COPY . .
+RUN npm run build
+
+# Use Nginx to serve the static files in production
+FROM nginx:alpine
+COPY --from=builder /app/build /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]

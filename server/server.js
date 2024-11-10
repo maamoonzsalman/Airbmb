@@ -22,6 +22,7 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
+// TODO: Add security settings for production
 app.use(
     session({
       store: new pgSession({
@@ -38,7 +39,7 @@ app.use(
   );
 
 app.get('/api/test', async (req, res) => {
-    res.json({ message: 'Backend is reachable!' });
+    res.json({ message: 'Backend is reachables!' });
 });
 
 const PORT = process.env.PORT || 4000;
