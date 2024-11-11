@@ -8,8 +8,8 @@
 # testing
 /coverage
 
-# production TODO: ADD /BUILD
-
+# production
+/build
 
 # misc
 .DS_Store
