@@ -9,7 +9,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-console.log("Running the latest server.ts version...");
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
@@ -41,7 +40,7 @@ app.use(session({
     },
 }));
 app.get('/api/test', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    res.json({ message: 'Backend is reachabless!' });
+    res.json({ message: 'Backend is reachablez!' });
 }));
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

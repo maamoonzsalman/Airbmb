@@ -1,12 +1,10 @@
 // @ts-nocheck
 
-console.log("Running the latest server.ts version...");
-
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
-const session = require('express-session')
-const connectPgSimple = require('connect-pg-simple')
+const session = require('express-session');
+const connectPgSimple = require('connect-pg-simple');
 
 
 dotenv.config();
@@ -43,9 +41,8 @@ app.use(
     })
   );
 
-
 app.get('/api/test', async (req, res) => {
-    res.json({ message: 'Backend is reachabless!' });
+    res.json({ message: 'Backend is reachablez!' });
 });
 
 const PORT = process.env.PORT || 4000;
