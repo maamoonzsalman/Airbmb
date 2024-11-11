@@ -7,21 +7,23 @@ function App() {
     useEffect(() => {
         console.log('Environment:', process.env.NODE_ENV);
 
-        // Immediately-invoked async function inside useEffect
-        (async () => {
+        const fetchData = async() => {
             try {
                 const response = await api.get('/api/test');
                 setData(response.data);
             } catch (e) {
                 console.error('Error fetching data:', e);
             }
-        })();
+        }
+
+        fetchData();
+
     }, []);
 
 
     return (
         <div>
-            <h1>Backendssstusddrrrsdhbj Testut test sup</h1>
+            <h1>Backend test</h1>
             <pre>{JSON.stringify(data, null, 2)}</pre>
         </div>
     );
