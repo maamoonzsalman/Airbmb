@@ -21,7 +21,7 @@ function App() {
 
     return (
         <div>
-            <h1>Backendssstu Testut</h1>
+            <h1>Backendssstus Testut</h1>
             <pre>{JSON.stringify(data, null, 2)}</pre>
         </div>
     );
