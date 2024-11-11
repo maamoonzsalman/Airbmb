@@ -8,6 +8,9 @@ RUN npm install --production=false
 
 COPY . .
 
+RUN npm install -g typescript
+RUN npm run build  # Assuming "build" script in package.json runs "tsc" to compile TypeScript to JavaScript
+
 EXPOSE 4000
 
-CMD ["npm", "run", "dev"]
+CMD ["node", "dist/server.js"]
