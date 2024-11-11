@@ -5,17 +5,18 @@ function App() {
     const [data, setData] = useState(null);
 
     useEffect(() => {
-        console.log('Environment:', process.env.NODE_ENV);
+        console.log('this is', process.env.NODE_ENV);
 
-        // Immediately-invoked async function inside useEffect
-        (async () => {
+        const fetchData = async () => {
             try {
                 const response = await api.get('/api/test');
                 setData(response.data);
             } catch (e) {
-                console.error('Error fetching data:', e);
+                console.error(e);
             }
-        })();
+        };
+
+        fetchData(); // Call the async function
     }, []);
 
     return (
