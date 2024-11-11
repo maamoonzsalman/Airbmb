@@ -13,6 +13,9 @@ RUN npm install
 # Copy the rest of the frontend code
 COPY . .
 
+# If using TypeScript, build the project
+RUN npm run build
+
 # Expose the frontend port
 EXPOSE 3000
 

@@ -1,8 +1,13 @@
-import express from 'express';
-import cors from 'cors';
-import dotenv from 'dotenv';
-import session from 'express-session';
-import connectPgSimple from 'connect-pg-simple';
+// @ts-nocheck
+
+console.log("Running the latest server.ts version...");
+
+const express = require('express');
+const cors = require('cors');
+const dotenv = require('dotenv');
+const session = require('express-session')
+const connectPgSimple = require('connect-pg-simple')
+
 
 dotenv.config();
 const pgSession = connectPgSimple(session);
@@ -38,8 +43,9 @@ app.use(
     })
   );
 
+
 app.get('/api/test', async (req, res) => {
-    res.json({ message: 'Backend is reachable!' });
+    res.json({ message: 'Backend is reachabless!' });
 });
 
 const PORT = process.env.PORT || 4000;

@@ -1,12 +1,12 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "main": "server.js",
-  "type": "module",
+  "main": "dist/server.js",
+  "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node dist/server.js",
-    "dev": "ts-node-dev server.ts",
+    "dev": "npx ts-node-dev server.ts",
     "build": "tsc"
   },
   "keywords": [],
@@ -23,7 +23,8 @@
     "passport": "^0.7.0",
     "passport-local": "^1.0.0",
     "pg": "^8.13.1",
-    "prisma": "^5.22.0"
+    "prisma": "^5.22.0",
+    "ts-node": "^10.9.2"
   },
   "devDependencies": {
     "@types/connect-pg-simple": "^7.0.3",
@@ -33,6 +34,8 @@
     "@types/express-session": "^1.18.0",
     "@types/node": "^22.9.0",
     "nodemon": "^2.0.15",
+    "ts-node-dev": "^2.0.0",
+    "ts-node": "^10.9.1",
     "typescript": "^5.6.3"
   }
 }

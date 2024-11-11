@@ -1,14 +1,14 @@
 {
   "compilerOptions": {
     "target": "ES6",                     // Use ECMAScript 6 for compatibility
-    "module": "NodeNext",
-    "moduleResolution": "nodenext",               
+    "module": "CommonJS",
+    "moduleResolution": "node",               
     "outDir": "./dist",                  // Output directory for compiled files
     "rootDir": "./",                     // Specify the root directory
     "strict": true,                      // Enable all strict type-checking options
     "esModuleInterop": true,             // Allows compatibility between CommonJS and ES modules
     "skipLibCheck": true                 // Skip type checking for .d.ts files
   },
-  "include": ["**/*.ts"],         // Include all .ts files in the server directory and subdirectories
+  "include": ["**/*.ts", "server.ts"],         // Include all .ts files in the server directory and subdirectories
   "exclude": ["node_modules"]
 }

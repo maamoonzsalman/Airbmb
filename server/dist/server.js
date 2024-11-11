@@ -1,3 +1,5 @@
+"use strict";
+// @ts-nocheck
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -7,11 +9,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import express from 'express';
-import cors from 'cors';
-import dotenv from 'dotenv';
-import session from 'express-session';
-import connectPgSimple from 'connect-pg-simple';
+console.log("Running the latest server.ts version...");
+const express = require('express');
+const cors = require('cors');
+const dotenv = require('dotenv');
+const session = require('express-session');
+const connectPgSimple = require('connect-pg-simple');
 dotenv.config();
 const pgSession = connectPgSimple(session);
 const app = express();
@@ -38,7 +41,7 @@ app.use(session({
     },
 }));
 app.get('/api/test', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    res.json({ message: 'Backend is reachable!' });
+    res.json({ message: 'Backend is reachabless!' });
 }));
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
