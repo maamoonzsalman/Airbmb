@@ -1,6 +1,4 @@
-// server/tests/sampleTest.ts
-
-import { expect } from 'chai';
+const expect = require('chai').expect;
 
 describe('Sample Test', () => {
   it('should return true', () => {
