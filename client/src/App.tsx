@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import api from './api';
-import axios from 'axios';
 
 function App() {
     const [data, setData] = useState(null);
