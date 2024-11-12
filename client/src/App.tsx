@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import api from './api';
+import axios from 'axios';
 
 function App() {
     const [data, setData] = useState(null);
@@ -23,7 +24,7 @@ function App() {
 
     return (
         <div>
-            <h1>Backend test</h1>
+            <h1>Backend tester</h1>
             <pre>{JSON.stringify(data, null, 2)}</pre>
         </div>
     );

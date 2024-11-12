@@ -42,7 +42,7 @@ app.use(
   );
 
 app.get('/api/test', async (req, res) => {
-    res.json({ message: 'Backend is reachablez!' });
+    res.json({ message: 'Backend is reachablezz!' });
 });
 
 const PORT = process.env.PORT || 4000;
