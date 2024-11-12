@@ -25,7 +25,7 @@ function App() {
         fetchData();
     }, []);
     return (React.createElement("div", null,
-        React.createElement("h1", null, "Backend test"),
+        React.createElement("h1", null, "Backend tester"),
         React.createElement("pre", null, JSON.stringify(data, null, 2))));
 }
 export default App;
