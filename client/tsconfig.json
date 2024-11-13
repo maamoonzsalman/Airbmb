@@ -9,7 +9,7 @@
     "skipLibCheck": true,                 // Skip type checking for .d.ts files
     "jsx": "react",                       // JSX support for React
     "outDir": "./dist",
-    "types": ["cypress", "node"]                   
+    "types": ["cypress", "node", "jest"]                   
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]

@@ -10,13 +10,20 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "eject": "react-scripts eject",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "cypress:open:dev": "npx cypress open",
+    "cypress:open:prod": "REACT_APP_BASE_URL=http://3.12.111.174:4000 npx cypress open"
   },
   "eslintConfig": {
     "extends": [
@@ -43,6 +50,7 @@
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "cypress": "^13.15.2",
+    "jest-environment-jsdom": "^29.7.0",
     "typescript": "^4.4.4"
   }
 }
