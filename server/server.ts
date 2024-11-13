@@ -29,7 +29,9 @@ app.use(cors(corsOptions));
 app.use(
     session({
       store: new pgSession({
-        conString: process.env.DATABASE_URL,
+        conString: process.env.NODE_ENV === 'production' 
+          ? process.env.PROD_DATABASE_URL 
+          : process.env.DEV_DATABASE_URL,
       }),
       secret: process.env.SESSION_SECRET || 'your_secret_key',
       resave: false,
