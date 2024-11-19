@@ -9,6 +9,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 import React, { useEffect, useState } from 'react';
 import api from './api';
+import NavBar from './components/NavBar';
+import './App.css';
 function App() {
     const [data, setData] = useState(null);
     useEffect(() => {
@@ -25,7 +27,6 @@ function App() {
         fetchData();
     }, []);
     return (React.createElement("div", null,
-        React.createElement("h1", null, "Backend tester"),
-        React.createElement("pre", null, JSON.stringify(data, null, 2))));
+        React.createElement(NavBar, null)));
 }
 export default App;

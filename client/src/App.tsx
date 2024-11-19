@@ -1,3 +1,7 @@
+//TODO: Get rid of this disabled warning
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
+
 import React, { useEffect, useState } from 'react';
 import api from './api';
 import NavBar from './components/NavBar';
