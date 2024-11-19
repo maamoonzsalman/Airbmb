@@ -46,7 +46,14 @@
     color: #717171;
     cursor: pointer;
     margin-left: 10px;
+    padding: 10px 15px;
+    border-radius: 50px; /* Rounded tabs */
+    transition: background-color 0.3s ease;
   }
+
+.navbar-tab:hover {
+    background-color: #f7f7f7; /* Light gray hover effect */
+}
   
   .navbar-tab.active {
     color: black;
@@ -58,10 +65,17 @@
     align-items: center;
     gap: 20px;
   }
+
+.navbar-right .nav-item:hover {
+    background-color: #f7f7f7; /* Light gray hover effect */
+}
   
   .navbar-right .nav-item {
     font-size: 15px;
     cursor: pointer;
+    padding: 10px 10px;
+    border-radius: 50px; /* Rounded for "Airbnb your home" */
+    transition: background-color 0.3s ease;
   }
   
   .navbar-right .icon {
@@ -78,6 +92,11 @@
     border: 1px solid #ddd;
     border-radius: 50px;
   }
+
+  .user-menu-container:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
+}
+
   
   .hamburger-icon {
     width: 24px;
@@ -112,6 +131,7 @@
     width: 925px; /* Increased width */
     height: 42px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+    position: relative;
   }
   
   .search-bar-section, .who {
@@ -119,12 +139,19 @@
     flex-direction: column;
     padding: 0 20px; /* Adjusted padding for better spacing */
     flex: 1;
+    border-radius: 50px; /* Rounded individual sections */
+    transition: background-color 0.3s ease;
+    height: calc(100% + 20px);
+    position: relative; /* For the pseudo-element positioning */
+    border-radius: 50px; /* Rounded individual sections */
+    transition: background-color 0.3s ease;
+    background-color: white; /* Default background */
+    justify-content: center;
   }
-  
-  .search-bar-section {
-    border-right: 1px solid #ddd; /* Keep borders for all except last */
-  }
-  
+
+.search-bar-section:hover, .who:hover {
+    background-color: #e0e0e0; /* Light gray on hover */
+}
   
   .search-bar-section label, .who label {
     font-size: 13px;
@@ -133,6 +160,9 @@
   }
   
   .search-bar-section input, .who input {
+    background-color: transparent; /* Make input background transparent */
+    border: none; /* Remove border */
+    outline: none; /* Remove focus outline */
     border: none;
     outline: none;
     font-size: 15px;
@@ -140,7 +170,7 @@
     width: 100%;
   }
   
-  .search-button {
+.search-button {
     background-color: #ff385c;
     border: none;
     border-radius: 50%;
@@ -156,6 +186,8 @@
     width: 20px;
     color: white;
   }
+
+
 
   .ion-icon {
     color: blue;
