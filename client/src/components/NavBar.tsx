@@ -30,7 +30,7 @@ const NavBar: React.FC = () => {
           <img
             src={globeIcon}
             alt="Language Options"
-            className="icon globe-icon"
+            className="icon globe-icon nav-item"
           />
           <div className="user-menu-container">
             <img
@@ -66,14 +66,16 @@ const NavBar: React.FC = () => {
             <label>Who</label>
             <input type="text" placeholder="Add guests" />
           </div>
-          <button className="search-button">
-            <img
-              src={searchIcon}
-              alt="Search"
-              className="search-icon"
-              
-            />
-          </button>
+          <div className='search-button-container'>
+            <button className="search-button">
+              <img
+                src={searchIcon}
+                alt="Search"
+                className="search-icon"
+                
+              />
+            </button>
+          </div>
         </div>
       </div>
     </nav>
