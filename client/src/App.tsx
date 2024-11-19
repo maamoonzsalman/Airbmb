@@ -11,6 +11,7 @@ import './App.css'
 function App() {
     const [data, setData] = useState(null);
     console.log('hello')
+    console.log('hey')
     useEffect(() => {
         console.log('Environment:', process.env.NODE_ENV);
 
