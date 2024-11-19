@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import api from './api';
+import SearchBar from './components/SearchBar';
 
 function App() {
     const [data, setData] = useState(null);
@@ -23,8 +24,8 @@ function App() {
 
     return (
         <div>
-            <h1>Backend tester</h1>
-            <pre>{JSON.stringify(data, null, 2)}</pre>
+            
+            <SearchBar/>
         </div>
     );
 }

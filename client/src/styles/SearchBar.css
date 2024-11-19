@@ -1,0 +1,55 @@
+.nav-bar-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-bar-container-top {
+    display: flex;
+}
+
+.nav-bar-section {
+    margin: 8px;
+}
+
+.nav-top-left {
+    display: flex;
+    margin-right: 75px;
+}
+
+.nav-logo {
+    margin-right: 8px;
+}
+
+.nav-top-middle {
+    display: flex;
+    margin-right: 75px;
+}
+
+.nav-top-right {
+    display: flex;
+    margin-right: 75px;
+}
+
+.airbnb-your-home, .global {
+    margin-right: 8px;
+}
+
+.settings-container {
+    display: flex;
+}
+
+.settings-ham {
+    margin-right: 8px;
+}
+
+.search-bar-container-expanded {
+    display: flex;
+}
+
+.search-location-container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
