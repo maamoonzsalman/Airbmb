@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import api from './api';
-import SearchBar from './components/SearchBar';
+import NavBar from './components/NavBar';
+import './App.css'
 
 function App() {
     const [data, setData] = useState(null);
@@ -25,7 +26,7 @@ function App() {
     return (
         <div>
             
-            <SearchBar/>
+            <NavBar/>
         </div>
     );
 }
