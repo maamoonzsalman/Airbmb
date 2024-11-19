@@ -10,7 +10,7 @@ import './App.css'
 
 function App() {
     const [data, setData] = useState(null);
-
+    console.log('hello')
     useEffect(() => {
         console.log('Environment:', process.env.NODE_ENV);
 
