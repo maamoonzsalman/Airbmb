@@ -13,7 +13,6 @@ const NavBar: React.FC = () => {
   return (
     <nav className="navbar">
       {/* Top Container */}
-      <div className="navbar-top">
         <div className="navbar-left">
           <img
             src={logo}
@@ -21,10 +20,50 @@ const NavBar: React.FC = () => {
             className="navbar-logo"
           />
         </div>
+        
+        {/*
         <div className="navbar-center">
           <span className="navbar-tab">Stays</span>
           <span className="navbar-tab">Experiences</span>
         </div>
+        */}
+        <div className="navbar-center">
+            <div className='navbar-center-top'>
+                <span className="navbar-tab">Stays</span>
+                <span className="navbar-tab">Experiences</span>
+            </div>
+            <div className='navbar-center-bottom'>
+                <div className="search-bar">
+                    <div className="search-bar-section">
+                        <label>Where</label>
+                        <input type="text" placeholder="Search destinations" />
+                    </div>
+                    <div className="search-bar-section">
+                        <label>Check in</label>
+                        <input type="text" placeholder="Add dates" />
+                    </div>
+                    <div className="search-bar-section">
+                        <label>Check out</label>
+                        <input type="text" placeholder="Add dates" />
+                    </div>
+                    <div className="who">
+                        <label>Who</label>
+                        <input type="text" placeholder="Add guests" />
+                    </div>
+                    <div className='search-button-container'>
+                        <button className="search-button">
+                        <img
+                            src={searchIcon}
+                            alt="Search"
+                            className="search-icon"        
+                        />
+                        </button>
+                    </div>
+                </div>
+            </div>
+               
+      </div>
+        
         <div className="navbar-right">
           <span className="nav-item">Airbnb your home</span>
           <img
@@ -45,9 +84,9 @@ const NavBar: React.FC = () => {
             />
           </div>
         </div>
-      </div>
+      
 
-      {/* Bottom Container */}
+      {/* Bottom Container 
       <div className="navbar-bottom">
         <div className="search-bar">
           <div className="search-bar-section">
@@ -78,6 +117,7 @@ const NavBar: React.FC = () => {
           </div>
         </div>
       </div>
+        */}
     </nav>
   );
 };
