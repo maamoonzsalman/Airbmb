@@ -1,3 +1,11 @@
+//TODO: Get rid of this disabled warningv
+//yea
+/* eslint-disable @typescript-eslint/no-unused-vars */
+//TODO: Get rid of this disabled warningv
+//yea
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
+
 import React, { useEffect, useState } from 'react';
 import api from './api';
 import NavBar from './components/NavBar';
@@ -5,7 +13,8 @@ import './App.css'
 
 function App() {
     const [data, setData] = useState(null);
-
+    console.log('hello')
+    console.log('hey')
     useEffect(() => {
         console.log('Environment:', process.env.NODE_ENV);
 
